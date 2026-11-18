@@ -66,25 +66,7 @@
     </div>
   </footer>
   <script src="/assets/js/site.js"></script>
-<!-- Chatwoot support widget (production) -->
-  <script>
-    window.chatwootSettings = {
-      hideMessageBubble: false,
-      position: "right",
-      locale: "en",
-      type: "standard",
-      launcherTitle: "Talk to a person"
-    };
-    (function(d,t) {
-      var BASE_URL = "https://support.suncoastservers.com";
-      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      g.src = BASE_URL + "/packs/js/sdk.js";
-      g.defer = true; g.async = true;
-      s.parentNode.insertBefore(g,s);
-      g.onload = function() {
-        window.chatwootSDK.run({ websiteToken: "pFgakM7fp7zLchpFmdJVNC1h", baseUrl: BASE_URL });
-      };
-    })(document,"script");
-  </script>
+<!-- Chatwoot support widget (default off; see /chatwoot.js) -->
+  <script src="/chatwoot.js"></script>
 </body>
 </html>
