@@ -38,7 +38,8 @@
 
   function showNudge() {
     var c = cfg();
-    if (!c.showNudge || c.enabled) return;
+    // No token = the bubble could not open on click, so never show a dead nudge.
+    if (!c.showNudge || c.enabled || !c.websiteToken) return;
     var lines = c.greetingLines || [
       'A person answers this chat, with AI as backup.',
       'Open the bubble when you are ready to talk to us.',
